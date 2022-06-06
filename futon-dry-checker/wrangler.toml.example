@@ -1,0 +1,9 @@
+name = "futon-dry-checker"
+main = "src/index.ts"
+compatibility_date = "2022-06-05"
+kv_namespaces = [
+  { binding = "KV", id = "XXXXXXXXXXXXX", preview_id = "XXXXXXXXXXXXX" }
+]
+
+[triggers]
+crons = ["0 9 * * *"]
