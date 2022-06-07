@@ -51,7 +51,7 @@ wrangler secret put -c futon-dry-recorder/wrangler.toml --name futon-dry-recorde
 wrangler kv:namespace create "FUTON_KV"
 # note: ${id} is the namespace ID of KV. 
 wrangler kv:key put SLACK_URL "YOUR_SLACK_INCOMING_WEBHOOK_URL" --namespace-id ${id}
-wrangler kv:key put DRY_CYCLE_SECOND "86400" --namespace-id ${id}
+wrangler kv:key put DRY_CYCLE_SECOND "86400000" --namespace-id ${id}
 ```
 
 If you want to test Workers locally, you also need to set up KV for preview namespace.
@@ -60,5 +60,5 @@ If you want to test Workers locally, you also need to set up KV for preview name
 wrangler kv:namespace create "FUTON_KV" --preview
 # note: ${id} is the namespace ID of KV.
 wrangler kv:key put SLACK_URL "YOUR_SLACK_INCOMING_WEBHOOK_URL" --namespace-id ${id}
-wrangler kv:key put DRY_CYCLE_SECOND "86400" --namespace-id ${id}
+wrangler kv:key put DRY_CYCLE_SECOND "86400000" --namespace-id ${id}
 ```
